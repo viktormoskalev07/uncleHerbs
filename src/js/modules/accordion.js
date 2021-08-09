@@ -1,32 +1,27 @@
 
-function accordionInit() {
+function accordionInit(accordion) {
     window.addEventListener("load", function () {
-      const accordion = document.querySelector(".accordion");
-      const items = accordion.querySelectorAll(".accordion__item");
-  
+      
+      const items = accordion.querySelectorAll(".accordion__item"); 
       const openedItem = (item) => {
-        const opened_item = accordion.querySelector(".is-open");
-  
-        toggle_item(item);
-  
+        const opened_item = accordion.querySelector(".is-open"); 
+        toggle_item(item); 
         if (opened_item && opened_item !== item) {
           toggle_item(opened_item);
         }
       };
   
       items.forEach((item) => {
-        const title = item.querySelector(".accordion__title-text");
-  
-        title.addEventListener("click", (e) => {
+        const title = item.querySelector(".accordion__title-text"); 
+        title.addEventListener("click", ( ) => {
           openedItem(item);
         });
   
-        title.addEventListener("keydown", (event) => {
-          if (event.code==='Enter'){
-  
+        title.addEventListener("keydown", (event) => { 
+          if (event.code==='Enter'||event.code==='Space'){ 
+            event.preventDefault(); 
             openedItem(item);
-          }
-  
+          } 
         });
       });
   
@@ -46,6 +41,9 @@ function accordionInit() {
     });
   }
   
-  if (document.querySelector(".accordion")) {
-    accordionInit();
+  if (document.querySelector(".accordion")) { 
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(accordion => {
+      accordionInit(accordion);
+    }); 
   }

@@ -1,6 +1,8 @@
 $main-button:green;
 $main-button-hover:rgb(9, 65, 9);
- 
+ button{
+   cursor: pointer;
+ }
 .button{
     width: 100%;
     display: inline-block;

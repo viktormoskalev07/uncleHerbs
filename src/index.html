@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('html-templates/head.html',{
+  title:'Gulp',
+  metadesc:'page with very interesting content'
+})
 
-<head>
-  
-  <meta charset="UTF-8">
-  <title>Amazing page</title>
-  <link rel="stylesheet" href="css/main.css"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-</head>
-
-<body class="body">
-<div class="main-wrapper">
-  @@include('./html-templates/header.html',{
-  }) 
-
-  @@include('./html-templates/modules/accordion.html')
+<link rel="stylesheet" href="css/swiper-bundle.css" class='swiper-delay_js' data-time="5111"></link>
 <main class="main">
- 
+  @@include('./html-templates/homepage/_main.html')
+  @@include('./html-templates/homepage/_main.html')
+  @@include('./html-templates/homepage/_main.html')
 </main>
 
 @@include('./html-templates/footer.html',{

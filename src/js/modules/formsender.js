@@ -25,13 +25,10 @@ function ajaxform(evt) {
 
     formstatus.innerHTML = 'Ваша заявка успешно отправлена, ожидайте звонка';
 
-  });
-
+  }); 
   request.open('POST', '/mail.php', true);
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-  request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&desc=' + encodeURIComponent(formData.desc));
-
-
+  request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&desc=' + encodeURIComponent(formData.desc)); 
 };
 
 

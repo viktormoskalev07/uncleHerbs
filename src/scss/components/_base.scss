@@ -1,37 +1,4 @@
-$green:#00BC87;
-$logowidth:50px;
- 
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px; 
-@mixin sm {
-  @media (min-width:$sm) {
-    @content
-  }
-}; 
-@mixin md {
-  @media (min-width:$md) {
-    @content
-  }
-}; 
-@mixin lg {
-  @media (min-width:$lg) {
-    @content
-  }
-}; 
-@mixin xl {
-  @media (min-width:$xl) {
-    @content
-  }
-}; 
-@mixin xxl {
-  @media (min-width:$xxl) {
-    @content
-  }
-};
-  
+
 body{
   background-color: rgb(199, 199, 199);
   // for popup noscroll 
@@ -47,17 +14,16 @@ min-height: 100vh;
 }
 .main{
   flex-grow: 1;
+  overflow: hidden;
 }
 
-.main-wrapper{
+.footer-to-bottom{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   z-index: 0;
   position: relative;
-  background-color: #fff;
-  overflow: hidden;
- 
+  background-color: #fff; 
 }
 
 html , body{

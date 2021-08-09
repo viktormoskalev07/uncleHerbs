@@ -1,10 +1,10 @@
 'use strict';
-
+var sass = require ('gulp-sass') (require ('sass'));
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     terser  = require('gulp-terser'),
-    sass = require('gulp-sass'),
+    // sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     // rigger = require('gulp-rigger'),
     fileinclude = require('gulp-file-include'),
@@ -12,10 +12,9 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
-    browserSync = require("browser-sync"),
+    browserSync = require("browser-sync"), 
     reload = browserSync.reload;
-    const babel = require('gulp-babel')
-
+    const babel = require('gulp-babel'); 
     var path = {
         build: { //Тут мы укажем куда складывать готовые после сборки файлы
           html: 'dist/',
@@ -26,10 +25,11 @@ var gulp = require('gulp'),
         },
         src: { //Пути откуда брать исходники
           html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-          js: ['node_modules/swiper/js/swiper.min.js',
+          js: [
+           
           'src/js/*.js'
           ],//В стилях и скриптах нам понадобятся только main файлы
-          style: 'src/scss/main.scss',
+          style: 'src/scss/*.*',
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
           fonts: 'src/fonts/**/*.*'
         },
@@ -56,7 +56,7 @@ var gulp = require('gulp'),
 gulp.task('html:build', async function () {
   gulp.src(path.src.html) //Выберем файлы по нужному пути
       // .pipe(rigger()) //Прогоним через rigger
-      .pipe(fileinclude()) //Прогоним через fileinclude
+      .pipe(fileinclude()) //Прогоним через fileinclude 
       .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
       .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
@@ -65,13 +65,13 @@ gulp.task('js:build', async function () {
   gulp.src(path.src.js) //Найдем наш main файл
       // .pipe(rigger()) //Прогоним через rigger
       .pipe(fileinclude()) //Прогоним через fileinclude
-      // .pipe(sourcemaps.init()) //Инициализируем sourcemap
+      .pipe(sourcemaps.init()) //Инициализируем sourcemap
       .pipe(babel({
         presets: ['@babel/env']
     }))
       .pipe(terser()) //Сожмем наш js 
 
-      // .pipe(sourcemaps.write()) //Пропишем карты
+      .pipe(sourcemaps.write()) //Пропишем карты
       .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
       .pipe(reload({stream: true})); //И перезагрузим сервер
       
@@ -133,7 +133,7 @@ gulp.task('image:build', async function() {
               }]
           }),
           //jpg lossless
-          imagemin.jpegtran({
+          imagemin.mozjpeg({
               progressive: true
           }),
           //jpg very light lossy, use vs jpegtran
