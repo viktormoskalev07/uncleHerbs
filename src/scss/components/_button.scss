@@ -4,25 +4,36 @@ $main-button: $orange;
    cursor: pointer;
  }
 .button{
-    display: inline-block;
-    padding:10px 25px;
-    background-color: $main-button;
-    border: solid $main-button;
-    font-size: 24px;
-    color:white;
-    border-radius: 0px 15px;
-    cursor: pointer;
-    transition: .3s;
-  }
-  
+  display: inline-block;
+  padding:10px 25px;
+  background-color: $main-button;
+  border: solid $main-button;
+  font-size: 24px;
+  color:white;
+  border-radius: 0px 15px;
+  cursor: pointer;
+  transition: .3s;
+  text-transform: uppercase;
+}
+.button:hover{
+  color:$dark;
+  background-color: white;
+}
+
 .button_dark{
-    background-color: $dark;
-  }
+  background-color: $dark;
+}
+.button_light{
+  background-color: $light;
+  border: 2px solid $accentColor;
+  color: $dark;
+}
+.button_light:hover{
+  background: $accentColor;
+  color: $light;
+}
   
-  .button:hover{
-    color:$dark;
-    background-color: white;
-  }
+  
   
   
  

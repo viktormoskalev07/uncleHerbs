@@ -1,12 +1,24 @@
 $orange:#FBB040;
 $white: #FDFAF3;
 $dark: #171717;
+$light: #F9F7F2;
+
 
 
 $mainBg: $dark;
+$secondBg: $light;
 $accentColor: $orange;
 $fontColor: $white;
+$secondFontColor: $dark;
  
+$listColor: $light;
+
+///// Fonts
+
+$mainFont: 'Bison';
+$accentFont: 'open sans'; //'MADE Sunflower'
+$secondFont: 'Forma DJR Display';
+
 $sm: 576px;
 $md: 768px;
 $lg: 992px;

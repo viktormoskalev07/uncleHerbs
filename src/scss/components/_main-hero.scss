@@ -14,7 +14,7 @@
         }
     }
     &__title{
-        font-family: 'MADE Sunflower';
+        font-family: $accentFont;
         font-size: 50px;
         line-height: 90%;
         text-transform: none;
@@ -31,7 +31,7 @@
     }
     &__sub-title{
         text-transform: uppercase;
-        font-family: "Bison";
+        font-family: $mainFont;
         font-size: 16px;
         color: $accentColor;
         display: block;
@@ -80,7 +80,7 @@
         letter-spacing: 0.1em;
         line-height: 130%;
         font-weight: 300;
-        font-family: "Forma DJR Display";
+        font-family: $secondFont;
         margin-bottom: 33px;
         @include md{
             margin-bottom: 40px;
