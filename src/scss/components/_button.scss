@@ -1,5 +1,5 @@
-$main-button:green;
-$main-button-hover:rgb(9, 65, 9);
+$main-button: $orange;
+ 
  button{
    cursor: pointer;
  }
@@ -16,7 +16,7 @@ $main-button-hover:rgb(9, 65, 9);
   }
   
   .button:hover{
-    color:$green;
+    color:$dark;
     background-color: white;
   }
   

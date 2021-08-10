@@ -1,6 +1,6 @@
 .instagram {
   padding: 55px 0 15px;
-  background-color: $blogColorBg1;
+  
   @include md {
     padding: 75px 0 100px;
   }
@@ -85,14 +85,14 @@
     padding-bottom: 35px;
 
     svg {
-      fill: $clr-text-main;
+      fill: $white;
       width: 30px;
       height: 30px;
     }
   }
 
   &__name-account {
-    color: $clr-text-main;
+    color: $white;
     font-weight: bold;
     font-size: 25px;
     line-height: 120%;

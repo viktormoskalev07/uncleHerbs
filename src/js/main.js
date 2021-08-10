@@ -13,6 +13,7 @@ window.onload= function(){
   
       @@include('lazyscripts.js')
       @@include('modules/accordion.js')
+      @@include('modules/fetch-inst.js')
 
  
 
