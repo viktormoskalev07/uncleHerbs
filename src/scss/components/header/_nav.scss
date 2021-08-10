@@ -1,6 +1,6 @@
-$nav-btn-color:#c72222;
+$nav-btn-color:$accentColor;
 $nav-bgc:rgba(0, 0, 0, 0.322);
-$nav-hover:rgb(170, 81, 81);
+$nav-hover:$accentColor;
 
 
 
@@ -35,17 +35,18 @@ $nav-hover:rgb(170, 81, 81);
     .menu-item {
         background-color: $nav-bgc;
         transform: translateX(+100%);
-        margin: 10px 0; 
+        margin: 5px 0; 
         a{
             padding: 10px 0px;
             width: 100%;
             display: block;
+            text-transform: uppercase;
         }
         &:nth-child(2n) {
             transform: translateX(-100%);
         } 
         @include nav-desktop {
-            margin: 0 10px; 
+            margin: 0 5px; 
             a {
                 padding: 15px;
             } 
@@ -63,6 +64,10 @@ $nav-hover:rgb(170, 81, 81);
         &:hover {
             background-color: $nav-hover;
             transition: 0.2s;
+        }
+        .button{
+            padding: 15px 25px;
+            font-size: 16px;
         }
     }
 
@@ -110,12 +115,22 @@ $nav-hover:rgb(170, 81, 81);
                 pointer-events: all;
                 width: 100%;
                 z-index: 10;
+                display: flex;
+                flex-direction: column;
 
                 max-height: 100vh;
             }
 
             .menu-item {
+                font-size: 32px;
                 transform: none;
+                &.order{
+                    order: -1;
+                }
+                .button{
+                    font-size: 32px;
+                    border: 0;
+                }
             }
 
             &__btn {

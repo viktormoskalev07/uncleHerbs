@@ -4,15 +4,19 @@ $main-button: $orange;
    cursor: pointer;
  }
 .button{
-    width: 100%;
     display: inline-block;
     padding:10px 25px;
     background-color: $main-button;
-    border:solid $main-button;
+    border: solid $main-button;
     font-size: 24px;
     color:white;
-    border-radius: 4px;
-      cursor: pointer;
+    border-radius: 0px 15px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+.button_dark{
+    background-color: $dark;
   }
   
   .button:hover{

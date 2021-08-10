@@ -1,0 +1,93 @@
+.main-hero{
+    background: $mainBg;
+    padding: 100px 0;
+    &__wrap{
+        text-align: center;
+        @include md{
+            text-align: left;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
+        @include xl{
+            align-items: initial;
+        }
+    }
+    &__title{
+        font-family: 'MADE Sunflower';
+        font-size: 50px;
+        line-height: 90%;
+        text-transform: none;
+        z-index: 1;
+        position: relative;
+        margin-bottom: 40px;
+        @include md{
+            text-align: left;
+            font-size: 65px;
+        }
+        @include lg{
+            font-size: 80px;
+        }
+    }
+    &__sub-title{
+        text-transform: uppercase;
+        font-family: "Bison";
+        font-size: 16px;
+        color: $accentColor;
+        display: block;
+        margin-bottom: 20px;
+        @include md{
+            font-size: 20px;
+        }
+        @include lg{
+            font-size: 24px;
+        }
+    }
+    &__img{
+        img{
+            margin: 0 auto;
+        }
+        &_mobile{
+            margin-top: -80px;
+            @include md{
+                display: none;
+            }
+        }
+        &_desktop{
+            display: none;
+            @include md{
+                width: 50%;
+                display: block;
+            }
+            @include lg{
+                margin-top: -180px;
+            }
+        }
+    }
+    &__context{
+        @include md{
+            width: 50%;
+        }
+        @include lg{
+            width: 45%;
+        }
+        @include xl{
+            width: 40%;
+        }
+    }
+    &__text{
+        opacity: .67;
+        letter-spacing: 0.1em;
+        line-height: 130%;
+        font-weight: 300;
+        font-family: "Forma DJR Display";
+        margin-bottom: 33px;
+        @include md{
+            margin-bottom: 40px;
+        }
+    }
+    &__button{
+        padding: 17px 37px;
+    }
+
+}

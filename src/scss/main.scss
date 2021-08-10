@@ -1,8 +1,8 @@
  
   @use 'sass:math';
 
+  @import 'components/_var'; 
   @import 'components/base';  
-  @import 'components/_var';   
    @import 'components/header/header';
    @import 'components/grid';
    @import 'components/sections';
@@ -12,6 +12,9 @@
    @import 'components/popup'; 
    @import 'components/list';   
    @import 'components/blog/blog';   
+
+
+   @import 'components/main-hero';
 
 @import'components/footer/footer';
 
