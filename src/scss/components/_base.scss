@@ -89,6 +89,9 @@ li, ul{
   &_dark{
     color: $secondFontColor; 
   }
+  &_white{
+    color: $fontColor; 
+  }
 }
 .sub-title{
   font-weight: 400;
