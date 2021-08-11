@@ -4,6 +4,7 @@ $main-button: $orange;
    cursor: pointer;
  }
 .button{
+  font-weight: 700;
   display: inline-block;
   padding:10px 25px;
   background-color: $main-button;
@@ -22,6 +23,11 @@ $main-button: $orange;
 
 .button_dark{
   background-color: $dark;
+  border: 2px solid $accentColor;
+  color: $light;
+}.button_dark:hover{
+  background: $accentColor;
+  color: $dark;
 }
 .button_light{
   background-color: $light;

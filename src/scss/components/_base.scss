@@ -30,7 +30,7 @@ min-height: 100vh;
 html , body{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bison', sans-serif;
 }
 
 * {
@@ -78,6 +78,8 @@ li, ul{
   font-size: 16px;
   color: $accentColor;
   font-weight: 700;
+  font-family: $mainFont;
+  letter-spacing: 0.1em;
   @include md{
     font-size: 20px;
   }
@@ -94,10 +96,11 @@ li, ul{
   color: $secondFontColor;
   text-align: center; 
   font-size: 24px;
+  text-transform: none;
   @include md{
     font-size: 32px;
   }
-  @include lg{
+  @include lg{ 
     font-size: 36px;
   }
   &_white{

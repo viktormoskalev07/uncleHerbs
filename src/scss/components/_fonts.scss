@@ -7,3 +7,43 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Bison";
+    src: url("../fonts/Bison/Bison-Bold.eot");
+    src: url("../fonts/Bison/Bison-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Bison/Bison-Bold.woff") format("woff"),
+    url("../fonts/Bison/Bison-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Bison";
+    src: url("../fonts/Bison/Bison-Regular.eot");
+    src: url("../fonts/Bison/Bison-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Bison/Bison-Regular.woff") format("woff"),
+    url("../fonts/Bison/Bison-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Bison";
+    src: url("../fonts/Bison/Bison-SemiBold.eot");
+    src: url("../fonts/Bison/Bison-SemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Bison/Bison-SemiBold.woff") format("woff"),
+    url("../fonts/Bison/Bison-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MADE-Sunflower";
+    src: url("../fonts/MADE-Sunflower/MADE-Sunflower.eot");
+    src: url("../fonts/MADE-Sunflower/MADE-Sunflower.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MADE-Sunflower/MADE-Sunflower.woff") format("woff"),
+    url("../fonts/MADE-Sunflower/MADE-Sunflower.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

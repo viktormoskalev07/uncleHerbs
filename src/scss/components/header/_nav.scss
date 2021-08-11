@@ -39,6 +39,7 @@ $nav-hover:$accentColor;
         a{
             padding: 10px 0px;
             width: 100%;
+            font-weight: 700;
             display: block;
             text-transform: uppercase;
         }
@@ -56,14 +57,12 @@ $nav-hover:$accentColor;
                 transform: none;
             }
         }
-
         display: block;
-        
         transition: 0.5s;
-
         &:hover {
             background-color: $nav-hover;
-            transition: 0.2s;
+            transition: background 0.2s;
+            border-radius: 0px 15px;
         }
         .button{
             padding: 15px 25px;

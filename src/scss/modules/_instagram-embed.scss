@@ -17,11 +17,12 @@
      position: relative;
     }
    
-     img{ 
+    img{ 
       height: 100%;
       width: 100%;
       object-fit: cover; 
-     } 
+      border-radius: 40px;
+    } 
   }
   &__container {
     width: 100%;
@@ -35,6 +36,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; 
+    flex-direction: column;
   }
 
   &__title {
@@ -81,21 +83,26 @@
   }
 
   &__icon-box {
-    display: flex;
-    padding-bottom: 35px;
-
     svg {
-      fill: $white;
+      fill: $accentColor;
       width: 30px;
       height: 30px;
+      margin-left: 10px;
     }
+  }
+  &__flex{
+    display: flex;
+    align-items: center;
   }
 
   &__name-account {
     color: $white;
     font-weight: bold;
+    font-family: $accentFont;
+    text-transform: none;
     font-size: 25px;
     line-height: 120%;
     padding-left: 15px;
+    margin: 25px 0 35px;
   }
 }

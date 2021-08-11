@@ -1,0 +1,66 @@
+.inform{
+    color: $secondFontColor;
+    text-align: center;
+    &__wrapper{
+        background: $thirdBg;
+        border-radius: 0 25px 0 25px;
+        // overflow: hidden;
+        @include md{
+            display: flex;
+        }
+    }
+    &__content{
+        position: relative;
+        z-index: 1;
+        padding: 45px 15px 10px;
+        @include md{
+            width: 75%;
+        }
+        @include lg{
+            padding: 130px 15px;
+            width: 75%;
+        }
+    }
+    &__email{
+        font-family: $accentFont;
+        font-size: 20px;
+        @include sm{
+            font-size: 28px  
+        }
+        @include lg{
+            font-size: 36px  
+        }
+        @include xl{
+            font-size: 48px  
+        }
+        a{
+            transition: .3s;
+        }
+        a:hover{
+            color: $accentColor;
+        }
+    }
+    &__img{
+        img{
+            max-width: 70%;
+            margin-left: auto; 
+        }
+        @include md{
+            margin-left: -100px;
+            img{
+                max-width: none;
+                height: 100%;
+            }
+        }
+    }
+    .sub-title{
+        max-width: 225px;
+        margin: 0 auto 60px;
+        @include sm{
+            max-width: none;
+        }
+        @include lg{
+            margin-bottom: 90px;
+        }
+    }
+}
