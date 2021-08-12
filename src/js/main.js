@@ -13,9 +13,17 @@ window.onload= function(){
   
       @@include('lazyscripts.js')
       @@include('modules/accordion.js')
-      @@include('modules/fetch-inst.js')
+      @@include('modules/fetch-inst.js');
 
- 
+      function hidescroll() {
+        body.style.paddingRight = window.innerWidth - html.offsetWidth + "px";
+        body.style.overflow = "hidden";
+      }
+      
+      function showscroll() {
+        body.style.paddingRight = 0;
+        body.style.overflow = "visible";
+      }
 
 //preloader
 if (document.querySelector(".preloader")) {

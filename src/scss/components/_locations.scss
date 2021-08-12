@@ -1,0 +1,80 @@
+.locations{
+    padding: 30px 0 0;
+    background: $mainBg;
+    text-align: center;
+    &__img{
+        @include md{
+           margin-top: -100px; 
+        }
+        @include lg{
+            margin-top: -70px; 
+        }
+        @include xl{
+            margin-top: -170px; 
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__wrapper{
+        position: relative;
+        z-index: 1;
+        @include lg{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__card{
+        padding: 70px 0;
+        border-bottom: 1px solid $accentColor;
+        @include lg{
+            padding: 60px 0 100px;
+            width: 100%;
+            border-bottom: 0;
+            border-right: 1px solid $accentColor;
+        }
+        &:last-child{
+            border: 0;
+        }
+    }
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        @include md{
+            margin-top: 30px;
+        }
+    }
+    .button{
+        min-width: 130px;
+        font-size: 20px;
+        margin: 0 10px;
+        padding: 10px;
+        @media screen and(min-width: 360px){
+            min-width: 150px;
+            margin: 0 15px;
+        }
+    }
+    .title{
+        font-size: 24px;
+        @include md{
+            font-size: 32px;
+        }
+        @include lg{
+            font-size: 36px;
+        }
+    }
+    .sub-title{
+        font-size: 32px;
+        @include md{
+            font-size: 45px;
+        }
+        @include xl{
+            font-size: 64px;
+        }
+    }
+    p{
+        font-family: $secondFont;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+}

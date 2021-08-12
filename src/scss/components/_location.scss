@@ -44,13 +44,14 @@
     &__img{
         margin-top: -30px;
         @include md{
-            margin-top: -18%;  
+            margin-top: -19%;  
           }
         @include xl{
-          margin-top: -15%;  
+          margin-top: -16%;  
         }
         img{
             width: 100%;
+            border-radius: 0 0 50px 0;
         }
     }
     .title{
