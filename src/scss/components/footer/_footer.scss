@@ -1,11 +1,8 @@
 .footer {
     color: $secondFontColor;
-    // background: linear-gradient(
-    //     90deg
-    //     ,#21899a 0,var(--footerColorBg1,#000) 50%,var(--footerColorBg2,orange) 50%,var(--footerColorBg2,orange) 100%);
-    @include lg {
-    background: $secondBg;
-    }
+    background: linear-gradient(
+        90deg
+        ,$secondBg 0,$secondBg 50%,$accentColor 50%,$accentColor 100%);
     @include xl {
       position: relative;
     }
@@ -21,9 +18,11 @@
         @include lg {
             order: 1;
         }
-        .footer-links {
-            width: 80%;
+        .footer-links { 
             margin: 35px auto 20px;
+            @include sm{
+                width: 80%;
+            }
             ul {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -88,8 +87,10 @@
             &__socials {
                 margin-top: 40px;
                 a{
-                    margin-right: 15px;
+                    margin-right: 15px; 
                     svg {
+                        width: 20px;
+                        height: 20px;
                         path {
                         fill: $dark;
                         transition: .3s;
@@ -102,9 +103,14 @@
                             }
                         }
                     }
-
                     &::after {
                         content: none !important;
+                    }
+                }
+                &_linkedin{
+                    svg{
+                        width: 22px !important;
+                        height: 22px !important;
                     }
                 }
             }
