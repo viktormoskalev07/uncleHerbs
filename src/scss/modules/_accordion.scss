@@ -14,6 +14,7 @@
     text-transform: none;
     font-style: 50px;
     font-family: $accentFont;
+    font-weight: 400;
     @include md{
       font-size: 60px;
     }

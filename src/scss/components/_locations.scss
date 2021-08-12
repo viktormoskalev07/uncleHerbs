@@ -36,6 +36,12 @@
         &:last-child{
             border: 0;
         }
+        &:first-child{
+            padding-top: 0;
+            @include lg{
+                padding: 60px 0 100px; 
+            }
+        }
     }
     &__buttons{
         display: flex;

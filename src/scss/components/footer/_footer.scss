@@ -19,7 +19,7 @@
             order: 1;
         }
         .footer-links { 
-            margin: 35px auto 20px;
+            margin: 35px 0 20px;
             @include sm{
                 width: 80%;
             }
@@ -155,6 +155,7 @@
             }
         }
         &__submit {
+            display: flex;
             margin-top: 30px;
             font-size: 0;
             input, button {
@@ -174,7 +175,8 @@
                 font-size: 20px;
                 color:#171717;
                 @include xl {
-                width: 340px;
+                max-width: 360px;
+                width: 100%;
                 }
                 &::placeholder{
                     color:#171717;
@@ -199,7 +201,8 @@
                 font-size: 25px;
                 font-family: $mainFont;
                 @include xl {
-                width: 180px;
+                    max-width: 260px;
+                    width: 100%;
                 }
     
                 &:hover, &:focus {
