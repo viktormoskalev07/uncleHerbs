@@ -1,93 +1,60 @@
-$blogPageHeroTitleColor:red;
-$blogPageHeroBtnBg:blue;
-$blogPageHeroBtnColor:green;
-$blogPageHeroBtnShadow:pink;
-$blogPageContentTextColor:red;
-$blogPageContentBtnBg:$orange;
-$blogPageContentBtnColor:blue;
-$blogPageContentBtnShadow:black;
 .blog-article {
-  margin-top: 40px;
-  margin-bottom: 60px;
   position: relative;
-
-  @include md {
-    margin-bottom: 120px;
-  }
-
-  &__container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  &__button {
-    display: flex;
-    justify-content: center;
-
-    a {
-      padding: 12px 35px;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      transition: .3s;
-
-      svg {
-        transition: .3s
-      }
+  &__post{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    @include md {
+      margin-bottom: 120px;
     }
   }
-
   &__hero {
     margin-bottom: 40px;
     padding: 90px 0 160px;
     position: relative;
     z-index: 1;
-
     @include lg {
       margin-bottom: 60px;
     }
-
     &-title {
+      padding: 0 30px;
       text-align: center;
       z-index: 2;
-      color: $blogPageHeroTitleColor;
-
+      max-width: 900px;
+      margin: 0 auto;
       time {
-        font-weight: 400;
+        font-weight: 500;
+        font-size: 16px;
+        @include md{
+          font-size: 20px;
+        }
+        @include md{
+          font-size: 22px;
+        }
       }
-
-      h1 {
+      .title{
+        font-size: 24px;
+        @include md{
+          font-size: 32px;
+        }
+        @include lg{
+          font-size: 36px;
+        }
+      }
+      .sub-title {
+        color: $accentColor;
+        line-height: 1.2;
+        margin: 60px 0;
+        font-size: 36px;
+        max-width: 250px;
+        margin: 60px auto;
+        @include sm {
+          max-width: none;
+        }
         @include md {
-          font-size: 3rem;
-        }
-
-        @include lg {
-          margin-top: 75px;
+          font-size: 48px;
         }
       }
     }
-
-    &-button {
-      margin-top: 60px;
-
-      a {
-        padding: 20px 35px;
-        font-size: 1.125rem;
-        font-weight: 700;
-        background-color: $blogPageHeroBtnBg;
-        color: $blogPageHeroBtnColor;
-
-        svg {
-          margin-left: 15px;
-          fill: $blogPageHeroBtnColor;
-        }
-
-        &:hover {
-          box-shadow: 0 0 8px 2px $blogPageHeroBtnShadow;
-        }
-      }
-    }
-
     figure {
       position: absolute;
       top: 0;
@@ -95,38 +62,25 @@ $blogPageContentBtnShadow:black;
       width: 100%;
       height: 100%;
       z-index: -1;
-
       img {
         height: 100%;
         width: 100%;
         display: block;
         object-fit: cover;
       }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(180deg, #172A2E 0%, rgba(23, 42, 46, 0) 100%);
-        z-index: 1;
-      }
     }
   }
-
-  &__content {
-    color: $blogPageContentTextColor;
-
-    h4 {
-      font-size: 1.125rem;
-
-      @include md {
-        font-size: 1.5rem;
-      }
+  &__wrapper{
+    @include md{
+      display: flex;
+      justify-content: space-between;
     }
-
+  }
+  &__posts{
+    max-width: 900px;
+    width: 100%;
+  }
+  &__content {
     figure {
       margin: 40px 0;
       width: 100%;
@@ -135,74 +89,65 @@ $blogPageContentBtnShadow:black;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-
+      border-radius: 25px;
       @include lg {
         margin: 60px 0;
       }
-
       img {
         width: 100%;
         height: 100%;
       }
     }
+    p{
+      font-family: $secondFont;
+      margin-bottom: 20px;
+    }
   }
-
-  &__bottom-button {
-    margin-top: 40px;
+  &__content-title{
+    text-align: left;
+    font-size: 24px;
     margin-bottom: 20px;
-
-    a {
-      background-color: $blogPageContentBtnBg;
-      color: $blogPageContentBtnColor;
-
-      svg {
-        margin-right: 10px;
-        transform: rotate(90deg);
-
-        path {
-          stroke: $blogPageContentBtnColor;
-        }
-      }
-
-      &:hover {
-        box-shadow: 0 0 8px 2px $blogPageContentBtnShadow;
-
-        svg {
-          transform: rotate(90deg) translateY(3px);
-        }
-      }
+    font-family: $mainFont;
+    font-weight: 500;
+    @include md {
+      font-size: 30px;
+      margin-bottom: 15px;
     }
   }
-
   &__socials {
-
-    @media (max-width: 1400px) {
-      margin-top: 60px;
+    width: 250px;
+    margin-top: 10px;
+    @include md{
+      order: -1;
     }
-
     ul {
       padding-left: 0;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       list-style: none;
-
+      @include md{
+        flex-direction: column;
+        align-items: flex-start;
+      }
       p,
       li {
         margin: 10px 6px;
         text-transform: uppercase;
-
         @include sm {
           margin: 10px 15px;
         }
       }
-
+      p{
+        font-size: 14px;
+        font-weight: 500;
+      }
       li {
-
         button {
           font-family: inherit;
-          font-size: 1rem;
+          font-size: 18px;
           font-weight: 700;
           display: block;
           text-decoration: underline;
@@ -212,8 +157,8 @@ $blogPageContentBtnShadow:black;
           padding: 0;
           text-transform: uppercase;
           cursor: pointer;
+          color: $fontColor;
         }
-
         &:hover {
           button {
             transform: translateX(3px);
@@ -221,15 +166,12 @@ $blogPageContentBtnShadow:black;
         }
       }
     }
-
     &.absolute {
       position: absolute;
-
       ul {
         margin: 0;
         flex-direction: column;
         align-items: flex-start;
-
         p {
           font-size: .75rem;
         }

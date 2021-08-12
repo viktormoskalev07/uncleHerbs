@@ -5,12 +5,9 @@
   @import 'components/base';  
    @import 'components/header/header';
    @import 'components/grid';
-   @import 'components/sections';
    @import 'components/button';
    @import 'components/card';
    @import 'components/fonts'; 
-   @import 'components/popup'; 
-   @import 'components/list';   
    @import 'components/blog/blog';   
 
 
@@ -19,10 +16,12 @@
    @import 'components/location';
    @import 'components/section-blocks'; 
    @import 'components/about-us'; 
-   @import 'components/blog'; 
+   @import 'components/blog/blog'; 
    @import 'components/inform'; 
    @import 'components/preloader'; 
    @import 'components/locations'; 
+   @import 'components/swiper-categories'; 
+   @import 'components/soon';
 
 @import'components/footer/footer';
 

@@ -1,8 +1,8 @@
 .instagram {
-  padding: 55px 0 15px;
+  margin: 55px 0 15px;
   
   @include md {
-    padding: 75px 0 100px;
+    margin: 75px 0 100px;
   }
   &__image{
     position: absolute;

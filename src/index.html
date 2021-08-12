@@ -9,13 +9,27 @@
   <!-- @@include('./html-templates/homepage/_main.html') -->
   @@include('./html-templates/homepage/main-hero.html')
   @@include('./html-templates/homepage/card-category.html')
-  @@include('./html-templates/homepage/location.html')
+  @@include('./html-templates/location.html')
   @@include('./html-templates/homepage/section-blocks.html')
   @@include('./html-templates/homepage/section-blocks-second.html')
   @@include('./html-templates/homepage/about-us.html') 
-  @@include('./html-templates/homepage/block-blog.html') 
+
+  <section class="blog">
+    <div class="container">
+      <h2 class="title">BLOG</h2>
+      <h3 class="sub-title sub-title_white">Talk to Uncle Herb</h3>
+      @@include('./html-templates/modules/block-blog.html',{
+        img:'talk-to-uncle-herb.png',
+        alt:'talk-to-uncle-herb',
+        title:'Making the Most of Your Cannabis in Stoney Creek',
+        data:'May 28, 2021'
+      }) 
+      <a href="./post.html" class="button button_dark">read all posts</a>
+    </div>
+  </section>
+
   @@include('./html-templates/homepage/inform.html')  
-  @@include('./html-templates/homepage/instagram.html') 
+  @@include('./html-templates/instagram.html') 
 
 </main>
 @@include('./html-templates/footer.html',{
