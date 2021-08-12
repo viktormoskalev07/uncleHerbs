@@ -2,15 +2,15 @@
 .container {
     margin: 0 auto ;
     padding: 0 20px;
-    max-width: 1380px; 
+    max-width: 1380px;
     @include sm {
        //  padding: 0 40px;
     }
 
 }
 
-.row { 
-   display: flex; 
+.row {
+   display: flex;
    flex-wrap: wrap;
    margin-right: -15px;
    margin-left: -15px;
@@ -25,22 +25,22 @@
 
 @mixin cols ($s , $m) {
    @media (min-width:$m){
-           @for $i from 1 to 13 { 
+           @for $i from 1 to 13 {
        .col-#{$s}-#{$i}{
            flex:0 0 math.div( 100%, 12)*$i;
            max-width:math.div( 100%, 12)*$i;
        }
-      } 
+      }
    }
 
 }
 
-   @for $i from 1 to 13 { 
+   @for $i from 1 to 13 {
 .col-#{$i}{
    flex:0 0 math.div( 100%, 12)*$i;
    max-width: math.div( 100%, 12)*$i;
 }
-} 
+}
 
 
 @include cols (sm , $sm);
