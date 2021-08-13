@@ -1,61 +1,65 @@
 <section class="card-category">
     <div class="container">
         <h2 class="title">ORDER herb BY CATEGORY</h2>
-        <div class="card-category__wrap">
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'Flower',
-                    link:'./livemenu.html',
-                    listItem:'<li>Dried Flower</li><li>Pre-Ground Blend</li>',
-                    src:'card-category/flower.png',
-                    alt:'Flower',
-                })
+        <div class="swiper-container swiper-categories">
+            <div class="card-category__wrap swiper-wrapper">
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'Flower',
+                        link:'./livemenu.html',
+                        listItem:'<li>Dried Flower</li><li>Pre-Ground Blend</li>',
+                        src:'card-category/flower.png',
+                        alt:'Flower',
+                    })
+                </div>
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'Vapes',
+                        link:'./livemenu.html',
+                        listItem:'<li>510 cartridges</li><li>pax pods</li><li>disposable pens</li><li>vape accesories</li><li>starter kits</li>',
+                        src:'card-category/vapes.png',
+                        alt:'Vapes',
+                    })
+                </div>
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'Edibles',
+                        link:'./livemenu.html',
+                        listItem:'<li>Chocolates</li><li>baked goods</li><li>soft chews</li><li>beverages</li>',
+                        src:'card-category/edibles.png',
+                        alt:'Edibles',
+                    })
+                </div>
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'Extracts',
+                        link:'./livemenu.html',
+                        listItem:'<li>oils</li><li>hash and kief</li><li>resin</li><li>rosin</li><li>shatter and wax</li>',
+                        src:'card-category/extracts.png',
+                        alt:'Extracts',
+                    })
+                </div>
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'CBD',
+                        link:'./livemenu.html',
+                        listItem:'<li>CBD DOMINANT</li><li>CBD+</li><li>TOPICALS</li>',
+                        src:'card-category/cbd.png',
+                        alt:'CBD',
+                    })
+                </div>
+                <div class="swiper-slide card-category__item">
+                    @@include('./card-category-item.html',{
+                        title:'Accessories',
+                        link:'./livemenu.html',
+                        listItem:'<li>bongs, pipes & rigs</li><li>rolling supplies</li><li>grinders</li><li>infusers</li>',
+                        src:'card-category/accessories.png',
+                        alt:'Accessories',
+                    })
+                </div>
             </div>
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'Vapes',
-                    link:'./livemenu.html',
-                    listItem:'<li>510 cartridges</li><li>pax pods</li><li>disposable pens</li><li>vape accesories</li><li>starter kits</li>',
-                    src:'card-category/vapes.png',
-                    alt:'Vapes',
-                })
-            </div>
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'Edibles',
-                    link:'./livemenu.html',
-                    listItem:'<li>Chocolates</li><li>baked goods</li><li>soft chews</li><li>beverages</li>',
-                    src:'card-category/edibles.png',
-                    alt:'Edibles',
-                })
-            </div>
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'Extracts',
-                    link:'./livemenu.html',
-                    listItem:'<li>oils</li><li>hash and kief</li><li>resin</li><li>rosin</li><li>shatter and wax</li>',
-                    src:'card-category/extracts.png',
-                    alt:'Extracts',
-                })
-            </div>
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'CBD',
-                    link:'./livemenu.html',
-                    listItem:'<li>CBD DOMINANT</li><li>CBD+</li><li>TOPICALS</li>',
-                    src:'card-category/cbd.png',
-                    alt:'CBD',
-                })
-            </div>
-            <div class="card-category__item">
-                @@include('./card-category-item.html',{
-                    title:'Accessories',
-                    link:'./livemenu.html',
-                    listItem:'<li>bongs, pipes & rigs</li><li>rolling supplies</li><li>grinders</li><li>infusers</li>',
-                    src:'card-category/accessories.png',
-                    alt:'Accessories',
-                })
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
