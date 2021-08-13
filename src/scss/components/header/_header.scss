@@ -1,13 +1,13 @@
 $header-bgc: $mainBg;
-@mixin nav-desktop  { 
-    @include lg { 
-        @content 
-    };  
+@mixin nav-desktop  {
+    @include lg {
+        @content
+    };
 }
-@mixin nav-mobile  { 
-    @media (max-width:$lg) { 
-        @content 
-    };  
+@mixin nav-mobile  {
+    @media (max-width:$lg) {
+        @content
+    };
 }
 
 .scroll-hidden{
@@ -25,24 +25,24 @@ $header-bgc: $mainBg;
     right: 0;
     background-color: $header-bgc;
     transition: 0.3s;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.253); 
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.253);
     &__content {
-        flex-wrap: wrap;  
+        flex-wrap: wrap;
         padding: 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    } 
+    }
     &__logo {
         width: 140px;
         img {
             object-fit: contain;
             width: 100%;
             height: auto;
-        } 
-    } 
-    &__bottom{ 
-        position: absolute; 
+        }
+    }
+    &__bottom{
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -52,7 +52,7 @@ $header-bgc: $mainBg;
         bottom: -80px;
         pointer-events: none;
         opacity: 0;
-        transition: 0; 
+        transition: 0;
     }
     &__social{
         padding: 0;
@@ -72,8 +72,8 @@ $header-bgc: $mainBg;
         @include nav-mobile{
             position: fixed;
             animation: 0.2s openHeader   forwards linear ;
-    
-            .header{ 
+
+            .header{
                 &__top{
                     width: 100%;
                     margin-bottom: 30px;
@@ -85,14 +85,14 @@ $header-bgc: $mainBg;
                     transition:  0.4s;
                     transition-delay: 0.4s;
                 }
-            }  
-        } 
-    } 
+            }
+        }
+    }
 @keyframes openHeader {
     0%{
        bottom:calc(100% - 120px);
     }
-  
+
     100%{
         bottom:0;
     }
