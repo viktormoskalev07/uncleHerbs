@@ -45,7 +45,7 @@ function instagramIntegration() {
                                            return  resp.json() 
                                           })
                                           .catch (e => {
-                                            console.log('%c change please user token in insta settings' , 'font-weight:800; font-size:22px; color: magenta');
+                                            console.log('insta error, wrong token www.curator.io'  );
                                             // console.log('%c   go to edit page , ', '  color: blue');
                                             // console.log('%c   finde lield "follow_instagram_feed_id" ,  ', '  color: green');
                                             // console.log('%c   and add your id from curator.io ', '  color: blue');
