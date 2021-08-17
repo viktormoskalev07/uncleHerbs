@@ -73,12 +73,14 @@
   }
 
   &__user-name {
+    font-family: 'Forma DJR Display';
     font-size: 18px;
     line-height: 120%;
     margin: 0;
     padding: 10px 0 30px;
     @include md {
       font-size: 25px;
+      text-align: center;
     }
   }
 
