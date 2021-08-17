@@ -21,9 +21,12 @@
       z-index: 2;
       max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 3;
       time {
         font-weight: 500;
         font-size: 16px;
+        letter-spacing: 0.8px;
         @include md{
           font-size: 20px;
         }
@@ -33,6 +36,7 @@
       }
       .title{
         font-size: 24px;
+        letter-spacing: 0.1px;
         @include md{
           font-size: 32px;
         }
@@ -43,10 +47,9 @@
       .sub-title {
         color: $accentColor;
         line-height: 1.2;
-        margin: 60px 0;
         font-size: 36px;
         max-width: 250px;
-        margin: 60px auto;
+        margin: 53px auto 38px;
         @include sm {
           max-width: none;
         }
@@ -81,8 +84,8 @@
     width: 100%;
   }
   &__content {
-    figure {
-      margin: 40px 0;
+      figure {
+      margin: 10px 0 40px;
       width: 100%;
       max-height: 500px;
       display: flex;
@@ -91,7 +94,7 @@
       overflow: hidden;
       border-radius: 25px;
       @include lg {
-        margin: 60px 0;
+        margin: 10px 0 80px;
       }
       img {
         width: 100%;
@@ -100,23 +103,34 @@
     }
     p{
       font-family: $secondFont;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+      color: #F9F7F2;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+
+
+
+    }
+    h4 {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 25px;
+      font-family: $mainFont;
+      font-weight: 500;
+      @include md {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
     }
   }
   &__content-title{
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-family: $mainFont;
-    font-weight: 500;
-    @include md {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+
   }
   &__socials {
     width: 250px;
-    margin-top: 10px;
+    // margin-top: 10px;
     @include md{
       order: -1;
     }
