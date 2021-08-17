@@ -12,9 +12,9 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
-    browserSync = require("browser-sync"), 
+    browserSync = require("browser-sync"),
     reload = browserSync.reload;
-    const babel = require('gulp-babel'); 
+    const babel = require('gulp-babel');
     var path = {
         build: { //Тут мы укажем куда складывать готовые после сборки файлы
           html: 'dist/',
@@ -26,7 +26,7 @@ var gulp = require('gulp'),
         src: { //Пути откуда брать исходники
           html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
           js: [
-           
+
           'src/js/*.js'
           ],//В стилях и скриптах нам понадобятся только main файлы
           style: 'src/scss/*.*',
@@ -56,7 +56,7 @@ var gulp = require('gulp'),
 gulp.task('html:build', async function () {
   gulp.src(path.src.html) //Выберем файлы по нужному пути
       // .pipe(rigger()) //Прогоним через rigger
-      .pipe(fileinclude()) //Прогоним через fileinclude 
+      .pipe(fileinclude()) //Прогоним через fileinclude
       .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
       .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
@@ -65,16 +65,16 @@ gulp.task('js:build', async function () {
   gulp.src(path.src.js) //Найдем наш main файл
       // .pipe(rigger()) //Прогоним через rigger
       .pipe(fileinclude()) //Прогоним через fileinclude
-      .pipe(sourcemaps.init()) //Инициализируем sourcemap
+      // .pipe(sourcemaps.init()) //Инициализируем sourcemap
       .pipe(babel({
         presets: ['@babel/env']
     }))
-      .pipe(terser()) //Сожмем наш js 
+      .pipe(terser()) //Сожмем наш js
 
-      .pipe(sourcemaps.write()) //Пропишем карты
+      // .pipe(sourcemaps.write()) //Пропишем карты
       .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
       .pipe(reload({stream: true})); //И перезагрузим сервер
-      
+
 });
 
 gulp.task('style:build', async function () {
@@ -144,7 +144,7 @@ gulp.task('image:build', async function() {
       .pipe(gulp.dest(path.build.img)); //И бросим в build
 });
 
-gulp.task('build', gulp.series( 
+gulp.task('build', gulp.series(
   'html:build',
   'js:build',
   'style:build',
