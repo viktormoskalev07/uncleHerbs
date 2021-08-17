@@ -14,6 +14,7 @@ window.onload= function(){
       @@include('lazyscripts.js')
       @@include('modules/accordion.js')
       @@include('modules/fetch-inst.js');
+      @@include('modules/share.js');
 
       function hidescroll() {
         body.style.paddingRight = window.innerWidth - html.offsetWidth + "px";

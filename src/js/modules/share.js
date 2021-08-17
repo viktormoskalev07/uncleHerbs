@@ -3,7 +3,7 @@ var Shares = {
 	width: 320,
 	height: 500,
 	init: function() {
-		var share = document.querySelectorAll('.social');
+		var share = document.querySelectorAll('#social-info');
 		for (var i = 0, l = share.length; i < l; i++) {
 			var url = share[i].getAttribute('data-url') || location.href,
 				title = share[i].getAttribute('data-title') || '',
@@ -79,7 +79,7 @@ window.addEventListener('load', forLoad)
 function forLoad (){
  const socialIinfo = document.getElementById('social-info');
 const buttons =	document.querySelectorAll('.push-share');	
-			for(i=0 ; i < buttons.length ; i++){
+			for(let i=0 ; i < buttons.length ; i++){
 				buttons[i].addEventListener('click', function(){
 				const id =this.getAttribute('data-id');
 				if(id){ 
