@@ -34,7 +34,7 @@ $nav-hover:$accentColor;
 
     .menu-item {
         transform: translateX(+100%);
-        margin: 5px 0; 
+        margin: 5px 0;
         a{
             padding: 10px 0px;
             width: 100%;
@@ -44,14 +44,37 @@ $nav-hover:$accentColor;
         }
         &:nth-child(2n) {
             transform: translateX(-100%);
-        } 
+        }
+        &:last-child {
+             @include nav-desktop {
+                a {
+                    display: inline-block;
+                    padding: 15px 25px;
+                    color: $light;
+                    font-size: 16px;
+                    font-weight: 700;
+                    background-color: $dark;
+                    border: 2px solid $accentColor;
+                    border-radius: 0px 15px;
+                    cursor: pointer;
+                    transition: .3s;
+                    text-transform: uppercase;
+                    &:hover{
+                        background: $accentColor;
+                        color: $dark;
+                    }
+                }
+
+            }
+
+        }
         @include nav-desktop {
-            margin: 0 5px; 
+            margin: 0 5px;
             a {
                 padding: 15px;
-            } 
+            }
             background-color: transparent;
-            transform: none; 
+            transform: none;
             &:nth-child(2n) {
                 transform: none;
             }
@@ -63,21 +86,18 @@ $nav-hover:$accentColor;
             transition: background 0.2s;
             border-radius: 0px 15px;
         }
-        .button{
-            padding: 15px 25px;
-            font-size: 16px;
-        }
+
     }
 
     &__btn {
         background-color: transparent;
         border: none;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         z-index: 10;
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 15px;
         padding: 10px;
         justify-content: center;
         align-items: center;
@@ -91,13 +111,13 @@ $nav-hover:$accentColor;
         &__row {
             transition: 0.2s;
             background-color: $nav-btn-color;
-            height: 3px;
+            height: 5px;
             width: 100%;
 
         }
 
         &__row+&__row {
-            margin-top: 7px;
+            margin-top: 10px;
         }
     }
 }

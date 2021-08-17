@@ -28,7 +28,7 @@
             }
             h5 {
                 color: $accentColor;
-            }   
+            }
         }
     }
     &__block-mini{
@@ -81,6 +81,7 @@
                 margin: 0;
                 img{
                     min-height: 440px;
+                    max-height: 440px;
                 }
             }
         }
@@ -98,7 +99,7 @@
         text-align: left;
         line-height: 1;
         @include md{
-            font-size: 32px; 
+            font-size: 32px;
             margin-bottom: 25px;
         }
         @include lg{
@@ -108,7 +109,7 @@
     }
     &__data{
         font-family: $secondFont;
-        opacity: 0.6; 
+        opacity: 0.6;
         font-size: 14px;
         @include md{
             font-size: 18px;
@@ -120,8 +121,8 @@
     .sub-title{
         margin-bottom: 40px;
         @include md{
-            margin-bottom: 50px;  
-        }    
+            margin-bottom: 50px;
+        }
     }
     .button{
         width: auto;
@@ -136,8 +137,8 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-  
-        img {             
+
+        img {
             object-fit: cover;
             object-position: center center;
             transition: transform 0.3s;
@@ -147,7 +148,7 @@
             &:not:first-child{
                 position: absolute;
                 top: 0;
-                left: 0;   
+                left: 0;
                 bottom: 0;
                 right: 0;
                 width: 100%;
@@ -155,4 +156,4 @@
             }
         }
       }
-} 
+}
