@@ -9,6 +9,7 @@ window.onload= function(){
 }  ;
 
       @@include('modules/nav.js')
+      @@include('modules/popup.js')
       @@include('modules/fixed-header.js')
 
       @@include('lazyscripts.js')

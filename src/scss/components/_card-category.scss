@@ -1,56 +1,65 @@
-.card-category{
-    background: $mainBg;
-    margin-bottom: 80px;
-    @include md{
-        margin-bottom: 100px;
-    }
-    .sub-title{
-        color: $fontColor;
-        text-align: left;
-        margin-bottom: 15px;
-        text-transform: none; 
-    }
-    .title{
-        text-align: left;
-        margin-bottom: 25px; 
-        @include lg{
-            text-align: center;
+.card-category {
+	background: $mainBg;
+	margin-bottom: 80px;
+	@include md {
+		margin-bottom: 100px;
+	}
+	.sub-title {
+		color: $fontColor;
+		text-align: left;
+		margin-bottom: 15px;
+		text-transform: none;
+	}
+	.title {
+		text-align: left;
+		margin-bottom: 20px;
+		@include lg {
+			text-align: center;
+		}
+	}
+	&__wrap {
+		display: flex;
+		@include lg {
+			flex-wrap: wrap;
+			justify-content: center;
+			border-radius: 0 50px 0 50px;
+			overflow: hidden;
+		}
+	}
+	&__item {
+		padding: 15px;
+		padding-right: 0;
+		margin: 5px;
+		background: #1e1e1e;
+		max-width: 400px;
+		width: 100%;
+		min-height: 280px;
+		display: flex;
+		justify-content: space-between;
+		@media screen and(min-width: 415px) {
+			padding: 20px 30px;
+			// padding-right: 20px;
+		}
+		.sub-title {
+			font-size: 30px;
+		}
+	}
+	.button {
+		font-size: 16px;
+		padding: 12px 15px;
+		margin-bottom: 20px;
+		@media screen and(min-width: 415px) {
+			padding: 8px 22px;
+            border-radius: 0 10px 0 10px;
+		}
+	}
+	&__list {
+		font-size: 14px;
+		color: $listColor;
+		opacity: 0.5;
+		letter-spacing: 1.7px;
+        li {
+            line-height: 1.4;
         }
-    }
-    &__wrap{ 
-        display: flex;
-        @include lg{
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
-    &__item{
-        padding: 15px;
-        padding-right: 0;
-        margin: 5px;
-        background: #1e1e1e;
-        max-width: 400px;
-        width: 100%;
-        min-height: 280px;
-        display: flex;
-        justify-content: space-between;
-        @media screen and(min-width: 415px) {
-            padding: 30px;
-            padding-right: 20px; 
-        }
-    }
-    .button{
-        font-size: 16px;
-        padding: 12px 15px;
-        margin-bottom: 20px;
-        @media screen and(min-width: 415px) {
-            padding: 12px 24px;
-        }
-    }
-    &__list{
-        font-size: 14px;
-        color: $listColor;
-        opacity: 0.5;
-        letter-spacing: 0.1em;
-    }
+	}
 }

@@ -10,10 +10,15 @@
         background-image: url('../images/location/sky.png');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
+        background-color: #555;
         padding: 25px 0 0;
-        border-radius: 0 0 50px 0;
+        border-radius: 35px 0 35px 0;
+        overflow: hidden;
         @include md{
+            margin: 0 5px;
             padding: 50px 0 0;
+            padding-top: 45px;
         }
     }
     &__wrap{
@@ -27,7 +32,7 @@
     }
     &__card{
         background: $secondBg;
-        padding: 50px;
+        padding: 40px 50px 45px;
         max-width: 300px;
         border-radius: 15px;
         margin: 0 15px 30px;
@@ -37,47 +42,47 @@
             max-width: 360px;
         }
         p{
-            line-height: 150%;
+            line-height: 1.5;
             margin-bottom: 30px;
         }
     }
     &__img{
         margin-top: -30px;
+        // border-radius: 0 0 50px 0;
+        // overflow: hidden;
         @include md{
-            margin-top: -19%;  
+            margin-top: -19%;
           }
         @include xl{
-          margin-top: -16%;  
+          margin-top: -17.3%;
         }
-        img{
-            width: 100%;
-            border-radius: 0 0 50px 0;
-        }
+
     }
     .title{
         margin-bottom: 25px;
         @include lg{
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
     }
     .sub-title{
-        font-size: 30px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 15px;
+        @include md{
+            font-size: 30px;
+            }
         &_small{
             font-size: 24px;
-            @include lg{
-                //font-size: 30px;
-            }
+
         }
     }
     .button{
-        padding: 15px 20px;
+        padding: 15px 35px;
         z-index: 1;
         position: relative;
         font-size: 20px;
         @include md{
             padding: 15px 25px;
-           margin-bottom: 50px; 
+           margin-bottom: 50px;
         }
     }
 

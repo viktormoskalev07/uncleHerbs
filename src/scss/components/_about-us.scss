@@ -35,6 +35,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
     &__text-accent{
@@ -45,7 +47,7 @@
     &__content{
         @include lg{
             width: 35%;
-            margin: 0 auto;
+            margin: 0 auto 0 0;
         }
     }
     &__img{

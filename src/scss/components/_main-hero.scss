@@ -1,12 +1,13 @@
 .main-hero{
     background: $mainBg;
-    padding: 100px 0;
+    padding: 60px 0 80px;
     &__wrap{
         text-align: center;
+        padding: 0 5px;
         @include md{
             text-align: left;
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
         }
         @include xl{
@@ -20,7 +21,7 @@
         text-transform: none;
         z-index: 1;
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         @include md{
             text-align: left;
             font-size: 65px;
@@ -35,7 +36,8 @@
         font-size: 16px;
         color: $accentColor;
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
+        letter-spacing: 2.2px;
         @include md{
             font-size: 20px;
         }
@@ -56,11 +58,11 @@
         &_desktop{
             display: none;
             @include md{
-                width: 50%;
+                width: 52%;
                 display: block;
             }
             @include lg{
-                margin-top: -180px;
+                margin-top: -170px;
             }
         }
     }
@@ -71,23 +73,18 @@
         @include lg{
             width: 45%;
         }
-        @include xl{
-            width: 40%;
-        }
     }
     &__text{
         opacity: .67;
-        letter-spacing: 0.1em;
-        line-height: 130%;
+        letter-spacing: 1.35px;
+        line-height: 1.4;
         font-weight: 300;
         font-family: $secondFont;
-        margin-bottom: 33px;
-        @include md{
-            margin-bottom: 40px;
-        }
+        margin-bottom: 35px;
     }
     &__button{
-        padding: 17px 37px;
+        padding: 14px 37px;
+        letter-spacing: 0.4px;
     }
 
 }

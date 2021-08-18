@@ -1,230 +1,267 @@
 .footer {
-    color: $secondFontColor;
-    background: linear-gradient(
-        90deg
-        ,$secondBg 0,$secondBg 50%,$accentColor 50%,$accentColor 100%);
-    @include xl {
-      position: relative;
-    }
-    .container {
-      padding: 0;
-    }
-    .row{
-        margin: 0;
-    }
-    &__links {
-        order: 2;
-        background: $secondBg;
-        @include lg {
-            order: 1;
-        }
-        .footer-links { 
-            margin: 35px 0 20px;
-            @include sm{
-                width: 80%;
-            }
-            ul {
-                margin-top: 0;
-                margin-bottom: 0;
-                padding: 0;
-                list-style: none;
-                &:not(:last-of-type) {
-                    margin-right: 15px;
+	color: $secondFontColor;
+	background: linear-gradient(90deg, $secondBg 0, $secondBg 50%, $accentColor 50%, $accentColor 100%);
+
+	@include xl {
+		position: relative;
+	}
+	.container {
+		padding: 0 25px;
+		@media (max-width: $lg) {
+			padding: 0;
+		}
+	}
+	.row {
+		margin: 0;
+	}
+	&__links {
+		order: 2;
+		background: $secondBg;
+		@include lg {
+			order: 1;
+		}
+		.footer-links {
+			margin-top: 40px;
+			@include sm {
+				width: 80%;
+			}
+			ul {
+				margin-top: 0;
+				margin-bottom: 0;
+				padding: 0;
+				list-style: none;
+				&:not(:last-of-type) {
+					margin-right: 15px;
+				}
+				li {
+					margin-bottom: 10px;
+					a {
+						font-weight: 700;
+						position: relative;
+						&::after {
+							content: '';
+							position: absolute;
+							bottom: -3px;
+							left: 0;
+							width: 0;
+							height: 2px;
+							background-color: $accentColor;
+							transition: 0.3s;
+						}
+						&:hover,
+						&:focus {
+							outline: none;
+							&::after {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			&__wrapper {
+				font-size: 14px;
+				margin-bottom: 20px;
+				@media screen and(min-width: 360px) {
+					font-size: 18px;
+				}
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				// @include lg {
+				// 	margin-left: 20px;
+				// }
+			}
+			.footer-links__nav,
+			.footer-links__location {
+				padding: 0;
+
+				@include md {
+					padding: 0 15px;
+				}
+			}
+
+			&__contact {
+				font-size: 12px;
+				font-family: $secondFont;
+				letter-spacing: 0.1px;
+				line-height: 1.5;
+
+				&:not(:last-child) {
+					margin-bottom: 50px;
+				}
+				@include sm {
+					margin-left: auto;
+				}
+				&_title {
+					font-size: 14px;
+					text-align: left;
+					font-weight: 400;
+					text-transform: none;
+					font-family: $accentFont;
+					margin-bottom: 10px;
+				}
+			}
+
+			&__socials {
+				margin-top: 35px;
+				a {
+					margin-right: 20px;
+					svg {
+						width: 20px;
+						height: 20px;
+						path {
+							fill: $dark;
+							transition: 0.3s;
+						}
+					}
+					&:hover,
+					&:focus {
+						svg {
+							path {
+								fill: $accentColor;
+							}
+						}
+					}
+					&::after {
+						content: none !important;
+					}
+				}
+				&_linkedin {
+					svg {
+						width: 22px !important;
+						height: 22px !important;
+					}
+				}
+			}
+			&__copyright {
+				font-family: $secondFont;
+				font-size: 10px;
+				letter-spacing: 10%;
+				line-height: 1.325;
+				font-weight: 400;
+				margin: 25px 0 10px;
+				flex: 0 0 100%;
+				text-align: left;
+                @include md {
+                    padding-left: 15px;
                 }
-                li {
-                    margin-bottom: 10px;
-                    a {
-                        font-weight: 700;
-                        position: relative;
-                        &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: -3px;
-                        left: 0;
-                        width: 0;
-                        height: 2px;
-                        background-color: $accentColor;
-                        transition: .3s;
-                        }
-                        &:hover, &:focus {
-                            outline: none;
-                            &::after {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-            &__wrapper {
-                font-size: 14px;
-                @media screen and(min-width: 360px) {
-                font-size: 18px;
-                }
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                @include lg{
-                    justify-content: space-between;
-                }
-            }
-            &__contact {
-                font-size: 12px;
-                margin-bottom: 60px;
-                font-family: $secondFont;
-                letter-spacing: 0.1em;
-                line-height: 1.5;
-                @include sm {
-                margin-left: auto;
-                }
-                &_title{
-                    font-size: 14px;
-                    text-align: left;
-                    text-transform: none;
-                    font-family: $accentFont;
-                    margin-bottom: 10px;
-                }
-            }
-            &__socials {
-                margin-top: 40px;
-                a{
-                    margin-right: 15px; 
-                    svg {
-                        width: 20px;
-                        height: 20px;
-                        path {
-                        fill: $dark;
-                        transition: .3s;
-                        }
-                    }
-                    &:hover, &:focus {
-                        svg {
-                            path {
-                                fill: $accentColor;
-                            }
-                        }
-                    }
-                    &::after {
-                        content: none !important;
-                    }
-                }
-                &_linkedin{
-                    svg{
-                        width: 22px !important;
-                        height: 22px !important;
-                    }
-                }
-            }
-            &__copyright {
-                font-family: $secondFont;
-                font-size: 14px;
-                font-weight: 400;
-                margin-top: 10px;
-                flex: 0 0 100%;
-                text-align: left;
-            }
-        }
-    }
-    &__form {
-        order: 1;
-        background-color: $accentColor;
-        @include lg {
-            order: 2;
-        }
-        .footer-form {
-            &__wrapper {
-                width: 80%;
-                margin: 75px auto 115px;
-                p {
-                    text-align: center;
-                    opacity: .5;
-                    @include lg {
-                    text-align: left;
-                    }
-                }
-            }
-        &__title {
-            margin: 20px 0;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            text-transform: none;
-            font-family: $accentFont;
-            @include lg {
-                text-align: left;
-                font-size: 2rem;
-            }
-        }
-        &__submit {
-            display: flex;
-            margin-top: 30px;
-            font-size: 0;
-            input, button {
-                border: 0;
-                height: 60px;
-                transition: .3s;
-                vertical-align: bottom;
-    
-                &:focus {
-                outline: transparent;
-                }
-            }
-            input {
-                width: 70%;
-                padding: 0 20px;
-                border-radius: 15px 0px 0px 15px;
-                font-size: 20px;
-                color:#171717;
-                @include xl {
-                max-width: 360px;
-                width: 100%;
-                }
-                &::placeholder{
-                    color:#171717;
-                    opacity: .3;
-                }
-                &:focus::placeholder {
-                color: transparent;
-                }
-    
-                &:hover, &:focus, &:active {
-                box-shadow: -1px 0px 8px 1px $dark;
-                }
-            }
-            button {
-                width: 30%;
-                border-radius: 0px 15px 0 0;
-                text-transform: uppercase;
-                font-weight: 700;
-                color: $light;
-                background-color: $dark;
-                cursor: pointer;
-                font-size: 25px;
-                font-family: $mainFont;
-                @include xl {
-                    max-width: 260px;
-                    width: 100%;
-                }
-    
-                &:hover, &:focus {
-                    box-shadow: 1px 0px 8px 1px $dark ;
-                }
-            }
-            }
-        }
-    }
-  
-    &__bg-img {
-        display: block;
-        position: absolute;
-        bottom: -175px;
-        right: 0;
-    
-        @include lg {
-            bottom: -220px;
-        }
-    
-        @include xl {
-            bottom: 0;
-        }
-    }
+			}
+		}
+	}
+	&__form {
+		order: 1;
+		background-color: $accentColor;
+		@include lg {
+			order: 2;
+			padding-left: 120px;
+		}
+		.footer-form {
+			&__wrapper {
+				width: 100%;
+				margin: 55px auto 80px;
+				p {
+					text-align: center;
+					opacity: 0.5;
+					@include lg {
+						text-align: left;
+					}
+				}
+			}
+			&__title {
+				margin: 20px 0 50px;
+				font-size: 1.5rem;
+				font-weight: 700;
+				letter-spacing: 1.6px;
+				line-height: 1.2;
+				text-align: center;
+				text-transform: none;
+				font-family: $accentFont;
+				@include lg {
+					text-align: left;
+					font-size: 2rem;
+				}
+			}
+			&__submit {
+				display: flex;
+				margin-top: 30px;
+				font-size: 0;
+				input,
+				button {
+					border: 0;
+					height: 60px;
+					transition: 0.3s;
+					vertical-align: bottom;
+
+					&:focus {
+						outline: transparent;
+					}
+				}
+				input {
+					width: 70%;
+					padding: 0 20px;
+					border-radius: 15px 0px 0px 15px;
+					font-size: 20px;
+					color: #171717;
+					@include xl {
+						max-width: 360px;
+						width: 100%;
+					}
+					&::placeholder {
+						color: #171717;
+						opacity: 0.3;
+					}
+					&:focus::placeholder {
+						color: transparent;
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						box-shadow: -1px 0px 8px 1px $dark;
+					}
+				}
+				button {
+					width: 40%;
+					margin-left: -15px;
+					border-radius: 0px 15px 0 15px;
+					text-transform: uppercase;
+					font-weight: 700;
+					color: $light;
+					background-color: $dark;
+					cursor: pointer;
+					font-size: 25px;
+					font-family: $mainFont;
+					@include md {
+						border-radius: 0px 15px 0 0;
+						margin-left: -15px;
+					}
+					@include xl {
+						max-width: 260px;
+						width: 100%;
+					}
+
+					&:hover,
+					&:focus {
+						box-shadow: 1px 0px 8px 1px $dark;
+					}
+				}
+			}
+		}
+	}
+
+	&__bg-img {
+		display: block;
+		position: absolute;
+		bottom: -175px;
+		right: 0;
+
+		@include lg {
+			bottom: -220px;
+		}
+
+		@include xl {
+			bottom: 0;
+		}
+	}
 }
