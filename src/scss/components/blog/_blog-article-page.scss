@@ -31,6 +31,7 @@
       time {
         font-weight: 500;
         font-size: 16px;
+        letter-spacing: 0.8px;
         @include md{
           font-size: 20px;
         }
@@ -52,7 +53,6 @@
       .sub-title {
         color: $accentColor;
         line-height: 1.2;
-        margin: 60px 0;
         font-size: 36px;
         margin: 70px auto 50px;
         @include sm {

@@ -6,8 +6,7 @@ $nav-hover:$accentColor;
 
 .nav {
     color: white;
-    width: 100%;
-
+    width: 100%; 
     @include nav-desktop {
         width: auto;
         display: flex;
@@ -36,29 +35,37 @@ $nav-hover:$accentColor;
         transform: translateX(+100%);
         margin: 5px 0;
         a{
-            padding: 10px 0px;
+            padding: 5px 0px;
+            font-size: 36px;
+            line-height: 1.2;
+            letter-spacing: 0.1em;
             width: 100%;
             font-weight: 700;
             display: block;
             text-transform: uppercase;
+            @include nav-desktop{
+                font-size: 20px;
+                letter-spacing: 0;
+            }
         }
         &:nth-child(2n) {
             transform: translateX(-100%);
         }
         &:last-child {
+            margin-left: 20px;
              @include nav-desktop {
                 a {
                     display: inline-block;
-                    padding: 15px 25px;
-                    color: $light;
-                    font-size: 16px;
-                    font-weight: 700;
+                    padding: 13px 28px;
+                    color: $light;  
                     background-color: $dark;
                     border: 2px solid $accentColor;
                     border-radius: 0px 15px;
                     cursor: pointer;
-                    transition: .3s;
+                    transition: .3s; 
                     text-transform: uppercase;
+                    word-spacing:4px;
+                    
                     &:hover{
                         background: $accentColor;
                         color: $dark;
@@ -92,8 +99,8 @@ $nav-hover:$accentColor;
     &__btn {
         background-color: transparent;
         border: none;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         z-index: 10;
         position: absolute;
         right: 10px;
