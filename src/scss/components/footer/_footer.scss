@@ -1,7 +1,7 @@
 .footer {
 	color: $secondFontColor;
 	background: linear-gradient(90deg, $secondBg 0, $secondBg 50%, $accentColor 50%, $accentColor 100%);
-
+	flex: 0 0 auto;
 	@include xl {
 		position: relative;
 	}
@@ -143,9 +143,9 @@
 				margin: 25px 0 10px;
 				flex: 0 0 100%;
 				text-align: left;
-                @include md {
-                    padding-left: 15px;
-                }
+				@include md {
+					padding-left: 15px;
+				}
 			}
 		}
 	}
@@ -174,12 +174,17 @@
 				font-weight: 700;
 				letter-spacing: 1.6px;
 				line-height: 1.2;
-				text-align: center;
+
+				text-align: left;
 				text-transform: none;
 				font-family: $accentFont;
+				@include md {
+					text-align: center;
+				}
+
 				@include lg {
-					text-align: left;
 					font-size: 2rem;
+					text-align: left;
 				}
 			}
 			&__submit {
@@ -224,6 +229,7 @@
 				button {
 					width: 40%;
 					margin-left: -15px;
+					position: relative;
 					border-radius: 0px 15px 0 15px;
 					text-transform: uppercase;
 					font-weight: 700;
@@ -234,7 +240,6 @@
 					font-family: $mainFont;
 					@include md {
 						border-radius: 0px 15px 0 0;
-						margin-left: -15px;
 					}
 					@include xl {
 						max-width: 260px;

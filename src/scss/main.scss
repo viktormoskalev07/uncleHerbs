@@ -1,33 +1,25 @@
- 
-  @use 'sass:math';
+@use 'sass:math';
 
-  @import 'components/_var'; 
-  @import 'components/base';  
-   @import 'components/header/header';
-   @import 'components/grid';
-   @import 'components/button';
-   @import 'components/card';
-   @import 'components/fonts'; 
-   @import 'components/blog/blog';   
+@import 'components/_var';
+@import 'components/base';
+@import 'components/header/header';
+@import 'components/grid';
+@import 'components/button';
+@import 'components/card';
+@import 'components/fonts';
 
+@import 'components/main-hero';
+@import 'components/card-category';
+@import 'components/location';
+@import 'components/section-blocks';
+@import 'components/about-us';
+@import 'components/blog/blog';
+@import 'components/inform';
+@import 'components/preloader';
+@import 'components/locations';
+@import 'components/swiper-categories';
+@import 'components/soon';
 
-   @import 'components/main-hero';
-   @import 'components/card-category';
-   @import 'components/location';
-   @import 'components/section-blocks'; 
-   @import 'components/about-us'; 
-   @import 'components/blog/blog'; 
-   @import 'components/inform'; 
-   @import 'components/preloader'; 
-   @import 'components/locations'; 
-   @import 'components/swiper-categories'; 
-   @import 'components/soon';
+@import 'components/footer/footer';
 
-@import'components/footer/footer';
-
- 
-
- 
-
-
-@import 'modules/modules.scss'
+@import 'modules/modules.scss';

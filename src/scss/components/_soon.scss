@@ -1,40 +1,42 @@
-.soon{
-    padding: 5% 20px 7%;
-    &__title{
-        font-family: $accentFont;
-        font-size: 50px;
-        text-transform: none;
-        letter-spacing: 3px;
-        margin-bottom: 50px;
-        line-height: 1.2;
-        @media screen and(min-width: 400px) {
-            font-size: 64px;
-        }
-        @include md{
-            font-size: 82px;
-        }
-        @include md{
-            font-size: 96px;
-        }
-    }
-    &__sub-title{
-        font-size: 30px;
-        font-weight: 500;
-        margin-bottom: 50px;
-        @media screen and(min-width: 400px) {
-            font-size: 36px;
-            margin-bottom: 30px;
-        }
-    }
-    figure{
-        display: flex;
-        justify-content: center;
-        margin-bottom: -170px;
-    }
-    .button{
-        display: block;
-        margin: 0 auto;
-        max-width: 315px;
-        text-align: center;
-    }
+.soon {
+	padding: 80px 20px;
+	@include md {
+        padding: 60px 20px;
+	}
+	&__title {
+		font-family: $accentFont;
+		font-size: 50px;
+		text-transform: none;
+		letter-spacing: 3px;
+		margin-bottom: 50px;
+		line-height: 1;
+		@media screen and(min-width: 400px) {
+			font-size: 60px;
+		}
+		@include md {
+			font-size: 82px;
+		}
+		@include md {
+			font-size: 96px;
+		}
+	}
+	&__sub-title {
+		font-size: 30px;
+		font-weight: 500;
+		margin-bottom: 50px;
+		@media screen and(min-width: 400px) {
+			font-size: 36px;
+		}
+	}
+	figure {
+		display: flex;
+		justify-content: center;
+		margin-bottom: -170px;
+	}
+	.button {
+		display: block;
+		margin: 0 auto;
+		max-width: 315px;
+		text-align: center;
+	}
 }

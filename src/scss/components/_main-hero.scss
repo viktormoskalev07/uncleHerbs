@@ -1,90 +1,98 @@
-.main-hero{
-    background: $mainBg;
-    padding: 60px 0 80px;
-    &__wrap{
-        text-align: center;
-        padding: 0 5px;
-        @include md{
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        @include xl{
-            align-items: initial;
-        }
-    }
-    &__title{
-        font-family: $accentFont;
-        font-size: 50px;
-        line-height: 90%;
-        text-transform: none;
-        z-index: 1;
-        position: relative;
-        margin-bottom: 30px;
-        @include md{
-            text-align: left;
-            font-size: 65px;
-        }
-        @include lg{
-            font-size: 80px;
-        }
-    }
-    &__sub-title{
-        text-transform: uppercase;
-        font-family: $mainFont;
-        font-size: 16px;
-        color: $accentColor;
-        display: block;
-        margin-bottom: 8px;
-        letter-spacing: 2.2px;
-        @include md{
-            font-size: 20px;
-        }
-        @include lg{
-            font-size: 24px;
-        }
-    }
-    &__img{
-        img{
-            margin: 0 auto;
-        }
-        &_mobile{
-            margin-top: -80px;
-            @include md{
-                display: none;
-            }
-        }
-        &_desktop{
-            display: none;
-            @include md{
-                width: 52%;
-                display: block;
-            }
-            @include lg{
-                margin-top: -170px;
-            }
-        }
-    }
-    &__context{
-        @include md{
-            width: 50%;
-        }
-        @include lg{
-            width: 45%;
-        }
-    }
-    &__text{
-        opacity: .67;
-        letter-spacing: 1.35px;
-        line-height: 1.4;
-        font-weight: 300;
-        font-family: $secondFont;
+.main-hero {
+	background: $mainBg;
+	padding: 25px 35px 80px;
+	@include md {
+		padding: 60px 0 80px;
+	}
+	&__wrap {
+		text-align: center;
+		padding: 0 5px;
+		@include md {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		@include xl {
+			align-items: initial;
+		}
+	}
+	&__title {
+		font-family: $accentFont;
+		font-size: 50px;
+		line-height: 90%;
+		text-transform: none;
+		z-index: 1;
+		position: relative;
+		margin-bottom: 30px;
+		@include md {
+			text-align: left;
+			font-size: 65px;
+		}
+		@include lg {
+			font-size: 80px;
+		}
+	}
+	&__sub-title {
+		text-transform: uppercase;
+		font-family: $mainFont;
+		font-size: 16px;
+		color: $accentColor;
+		display: block;
+		letter-spacing: 2.2px;
+		@include md {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+		@include lg {
+			font-size: 24px;
+		}
+	}
+	&__img {
+		img {
+			margin: 0 auto;
+		}
+		&_mobile {
+			margin-top: -80px;
+			@include md {
+				display: none;
+			}
+		}
+		&_desktop {
+			display: none;
+			@include md {
+				width: 52%;
+				display: block;
+			}
+			@include lg {
+				margin-top: -170px;
+			}
+		}
+	}
+	&__context {
+		@include md {
+			width: 50%;
+		}
+		@include lg {
+			width: 45%;
+		}
+	}
+	&__text {
         margin-bottom: 35px;
-    }
-    &__button{
-        padding: 14px 37px;
-        letter-spacing: 0.4px;
-    }
+		font-family: $secondFont;
+        font-size: 13px;
+        line-height: 1.4;
+		letter-spacing: 1px;
+		font-weight: 300;
+		opacity: 0.67;
 
+        @include md {
+            font-size: 16px;
+            letter-spacing: 1.35px;
+		}
+	}
+	&__button {
+		padding: 14px 37px;
+		letter-spacing: 0.4px;
+	}
 }

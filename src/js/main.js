@@ -8,12 +8,12 @@ window.onload= function(){
   pagescroll();
 }  ;
 
-      @@include('modules/nav.js')
-      @@include('modules/popup.js')
-      @@include('modules/fixed-header.js')
+      @@include('modules/nav.js');
+      @@include('modules/popup.js');
+      @@include('modules/fixed-header.js');
 
-      @@include('lazyscripts.js')
-      @@include('modules/accordion.js')
+      @@include('lazyscripts.js');
+      @@include('modules/accordion.js');
       @@include('modules/fetch-inst.js');
       @@include('modules/share.js');
 
